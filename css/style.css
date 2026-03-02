@@ -1,0 +1,306 @@
+/* FONTS */
+@font-face {
+    font-family: 'PublicaSans';
+    src: url('../misc/fonts/ZPublicaSans.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PublicaSans';
+    src: url('../misc/fonts/PublicaSans-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PublicaSans';
+    src: url('../misc/fonts/PublicaSans-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* MOBIL */
+@media screen and (min-width: 1px) {
+    #landingPage {
+        background-color: white;
+        margin: 0;
+    }
+
+    #shoppingPage{
+        background-color: white;
+        margin:0;
+
+        /* grid-template-rows: 100px,100px,100px; */
+        grid-template-areas: 
+        "hd"
+        "mn"
+        "nv"
+        ;
+    }
+
+    main {
+        /* grid-area: ma; */
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    div.introText {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+        margin-top: 80px;
+        /* background-color: pink; */
+        width: 100%;
+        height: 100px;
+    }
+    div.introText h1 {
+        text-align: center;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 700;
+        color: #e61d1d;
+        font-size: 3em;
+        margin:0;
+    }
+    div.introText p {
+        margin:0;
+        text-align: center;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 400;
+        color: #e61d1d;
+    }
+
+    div.StartKnapp {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        /* background-color: red; */
+        width: 100%;
+        height: 200px;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    div.StartKnapp a {
+        display: flex;
+        height: 50px;
+        align-self: center;
+        width: 200px;
+        border-radius: 10px;
+        border: 3px solid #e61d1d;
+        background-color: #e61d1d;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'PublicaSans';
+        color: white;
+        box-shadow: 0 4px 15px rgba(230, 34, 34, 0.235);
+        cursor:pointer;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+    }
+    div.StartKnapp a.login {
+        display: flex;
+        height: 50px;
+        align-self: center;
+        width: 200px;
+        border-radius: 10px;
+        border: 3px solid #2C3E50;
+        background-color: white;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'PublicaSans';
+        color: #2C3E50;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        cursor:pointer;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+    }
+    div.StartKnapp a.login:visited {
+        color: #2C3E50;
+    }
+    div.StartKnapp a:visited {
+        color: white;
+    }
+
+    /* footer {
+        grid-area: ft;
+    } */
+    div.pizzaBild {
+        display: flex;
+        margin:0;
+        padding: 0;
+        justify-content: center;
+        align-items: end;
+        width: 100%;
+        height: 250px;
+        margin-top: auto;
+    }
+    div.pizzaBild img {
+        max-height: 100%;
+        width: auto;
+    }
+
+
+    /* SHOPPING PAGE BÖRJAR HÄR!!!!!!!! */
+    /* SHOPPING PAGE BÖRJAR HÄR!!!!!!!! */
+    /* SHOPPING PAGE BÖRJAR HÄR!!!!!!!! */
+    #mainSida2 {
+        justify-content:flex-start ;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row ;
+        width: 100%;
+        gap: 10px;
+        margin:0;
+    }
+
+    main div.annons {
+        background-color: pink;
+        height: 100px;
+        width: 100px;
+        margin:0;
+    }
+
+    header div.nuvarandePlats {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #shoppingPage header div.nuvarandePlats {
+        margin:0;
+        flex-direction: row;
+    }
+
+    #shoppingPage header div.nuvarandePlats .p-header {
+        font-family: 'PublicaSans';
+        font-weight: 700;
+        font-size: 16px;
+    }
+    #shoppingPage header div.nuvarandePlats .p-header2 {
+        font-family: 'PublicaSans';
+        font-weight: 400;
+        font-size: 16px;
+        margin-top: 19px;
+    }
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 600px) {
+    body {
+        background-color: white;
+        margin: 0;
+    }
+
+    main {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    div.introText {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+        margin-top: 80px;
+        /* background-color: pink; */
+        width: 100%;
+        height: 100px;
+    }
+    div.introText h1 {
+        text-align: center;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 700;
+        color: #e61d1d;
+        font-size: 3em;
+        margin:0;
+    }
+    div.introText p {
+        margin:0;
+        text-align: center;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 400;
+        color: #e61d1d;
+    }
+
+    div.StartKnapp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: red; */
+        width: 100%;
+        height: 125px;
+        gap: 30px;
+    }
+    div.StartKnapp a {
+        display: flex;
+        height: 50px;
+        align-self: center;
+        width: 200px;
+        border-radius: 10px;
+        border: 3px solid #e61d1d;
+        background-color: #e61d1d;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'PublicaSans';
+        color: white;
+        box-shadow: 0 4px 15px rgba(230, 34, 34, 0.235);
+        cursor:pointer;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+    }
+    div.StartKnapp a.login {
+        display: flex;
+        height: 50px;
+        align-self: center;
+        width: 200px;
+        border-radius: 10px;
+        border: 3px solid #2C3E50;
+        background-color: white;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'PublicaSans';
+        color: #2C3E50;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        cursor:pointer;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+    }
+    div.StartKnapp a.login:visited {
+        color: #2C3E50;
+    }
+    div.StartKnapp a:visited {
+        color: white;
+    }
+
+    div.pizzaBild {
+        display: flex;
+        margin:0;
+        padding: 0;
+        justify-content: center;
+        align-items: end;
+        width: 100%;
+        height: 250px;
+        margin-top: auto;
+    }
+    div.pizzaBild img {
+        max-height: 100%;
+        width: auto;
+        margin-top: 200px;
+    }
+}
