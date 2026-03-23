@@ -29,7 +29,8 @@
     }
 
     #shoppingPage{
-        background-color: rgb(247, 246, 246);
+        /* background-color: rgb(247, 246, 246); */
+        background-color: #ffffff;
         margin:0;
 
         /* grid-template-rows: 100px,100px,100px; */
@@ -38,11 +39,13 @@
         "mn"
         "nv"
         ;
+
+        overflow-x: clip;
     }
 
     main {
         /* grid-area: ma; */
-        height: 100vh;
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -159,34 +162,244 @@
         flex-wrap: wrap;
         flex-direction: row ;
         width: 100%;
-        height: auto;
-        padding: 20px;
+        height: auto + 200px;
+        padding-top: 20px;
         gap: 10px;
         margin:0;
     }
 
     #shoppingPage #mainSida2 div.annonser {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 25px;
+        padding-right: 100px;
+        padding-left: 20px;
         height: auto;
         width: 100%;
-        margin:0;
         gap: 20px;
     }
 
     #shoppingPage div.annonser div.annons {
-        width: 200px;
-        height: 200px;
+        width: 340px;
+        flex-shrink: 0;
+        height: 350px;
         background-color: white;
-        border-radius: 10px;
+        border-radius: 20px;
+        position: relative;
+        cursor: pointer;
+        border: 2px solid #eeeeee;
+        transition: box-shadow 500ms;
+    }
+
+    #shoppingPage div.annonser div.annons:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
     }
 
     #shoppingPage div.annonser div.annons div.annonsBild {
+        width: auto;
+        height: 220px;
+        border-radius: 18px 18px 0px 0px;
+        overflow: hidden;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBild img {
         width: 100%;
-        height: 125px;
+        height: auto;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBild div.annonsBetyg {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        align-items: center;
+        margin:0;
         background-color: white;
-        border-radius: 10px 10px 0px 0px;
+        width: 65px;
+        height: 25px;
+        border-radius: 20px;
+
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        z-index: 10;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBild div.annonsPris {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        align-items: center;
+        margin:0;
+        background-color: #e61d1d;
+        width: 65px;
+        height: 40px;
+        border-radius: 7.5px;
+
+        position: absolute;
+        bottom: 150px;
+        right: 15px;
+        z-index: 10;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBild div.annonsBetyg #star {
+        color: #e61d1d;
+        font-weight: 600;
+        font-size: 12px;
+        font-family: 'PublicaSans';
+        margin-top: 13px;
+        
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBild div.annonsPris #star {
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 18px;
+        font-family: 'PublicaSans';
+        margin-top: 20px;
+        font-style: italic;
+        
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsInfo {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsInfo h1.annonsTitel {
+        margin-left: 10px;
+        margin-top:5px;
+        margin-bottom:0;
+
+        font-family: 'PublicaSans';
+        font-weight: 500;
+        font-size: 20px;
+
+    }
+    
+    #shoppingPage div.annonser div.annons div.annonsInfo p.annonsTidKvar {
+        margin-left: 10px;
+        margin-top:0;
+        margin-bottom:0;
+
+        font-family: 'PublicaSans';
+        font-weight: 400;
+        font-size: 14px;
+        color:#e61d1d;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsInfo p.annonsUser {
+        color: #535353;
+        font-family: 'PublicaSans';
+        font-weight: 400;
+        font-size: 12px;
+        position: absolute;
+        top: 250px;
+        left: 10px;
+        margin:0;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsInfo button.buybutton {
+        width: 100px;
+        height: 35px;
+        border-radius: 10px;
+        border:0;
+        background-color: #e61d1d;
+        color: white;
+        font-family: 'PublicaSans', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        cursor: pointer;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsInfo button.buybutton:hover {
+        background-color: #ce1b1b;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsInfo div.annonsPris {
+        background-color: white;
+
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBild div.annonsPlats {
+        display: flex;
+        align-items: center;
+        width: 200px;
+        height: 30px;
+        /* background-color: white; */
+
+        border-radius: 5px;
+        position: absolute;
+        bottom: 145px;
+        right: 5px;
+        z-index: 100;
+        margin:0;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBild div.annonsPlats p {
+        text-align: right;
+        font-family: 'PublicaSans', sans-serif;
+        font-size: 16px;
+        color: white;
+        margin:0;
+        width: 100%;
+        
+    }
+    
+    #shoppingPage div.annonser div.annons div.annonsInfo div.annonsPris p {
+        color: #e61d1d;
+        font-weight: 600;
+        font-size: 28px;
+        font-family: 'PublicaSans';
+        position: absolute;
+        margin:0;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBudande {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBudande p.annonsTypBud {
+        margin-left: 10px;
+        margin-top: 10px;
+        font-family: 'PublicaSans';
+        font-weight: 500;
+        font-size: 16px;
+
+        text-decoration-line: underline;
+        text-decoration-color: #e61d1d;
+        text-decoration-thickness: 5px;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBudande p.annonsTypBuyNow {
+        margin-left: 10px;
+        margin-top: 15px;
+        font-family: 'PublicaSans';
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBudande p.annonsPris {
+        margin-right: 10px;
+        margin-top: 10px;
+        font-family: 'PublicaSans';
+        font-weight: 600;
+        font-size: 20px;
+
+        text-decoration-line: underline;
+        text-decoration-color: #e61d1d;
+        text-decoration-thickness: 3px;
     }
 
     header div.nuvarandePlats {
@@ -197,10 +410,65 @@
     }
 
     #shoppingPage header {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    #shoppingPage div.nuvarandePlats button.platsIkon {
+        width: 32px;
+        height: 32px;
+        margin-right: 7px;
+
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        
+        
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0; 
+    }
+    #shoppingPage div.nuvarandePlats button.platsIkon:hover {
+        background-color: #d6d6d6;
+    }
+    #shoppingPage button.platsIkon {
+        width: 25px;
+        height: 25px;
+        border-radius: 4px;
+        opacity: 100%;
+    }
+
+    #shoppingPage div.nuvarandePlats h1 {
+        text-align: left;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 700;
+        color: #e61d1d;
+        font-size: 2em;
+        margin:0;
+        line-height: 0.8;
+    }
+
+    #shoppingPage div.nuvarandePlats #leftovers {
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 300;
+        color: #e61d1d;
+        margin:0;
+        line-height: 1;
+    }
+
+    #shoppingPage div.nuvarandePlats div.loggaochplats {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 75px;
+        margin-top: 5px;
     }
 
     #shoppingPage header div.nuvarandePlats .p-header {
+        margin: 0;
+        display: inline;
         font-family: 'PublicaSans';
         font-weight: 700;
         font-size: 16px;
@@ -209,12 +477,15 @@
         font-family: 'PublicaSans';
         font-weight: 400;
         font-size: 16px;
-        margin-top: 19px;
+        margin:0;
+        display: inline;
+        padding-left: 10px;
     }
-    #shoppingPage .nuvarandePlats img.PlatsIkon {
-        width: 20px;
-        height: auto;
-        margin-right: 7px;
+
+    #shoppingPage div.nuvarandePlats button.platsIkon span {
+        font-size: 20px;
+        font-weight: 300;
+        pointer-events: none;
     }
 
     #shoppingPage #mainSida2 div.KnapparKategorier {
@@ -223,20 +494,21 @@
         flex-direction: row;
         justify-content: flex-start;
         margin-bottom: 20px;
+        padding-left: 20px;
         gap: 10px;
         align-items: start;
     }
 
     #shoppingPage #mainSida2 div.KnapparKategorier button.kategoriKnappAlla {
-        height: 30px;
-        width: 60px;
+        height: 35px;
+        width: 90px;
         background-color: #e61d1d;
         color: white;
-        border-radius: 10px;
+        border-radius: 20px;
         border:0;
 
         font-family: 'PublicaSans';
-        font-weight: 400;
+        font-weight: 500;
         font-size: 12px;
         text-align: center;
         cursor: pointer;
@@ -244,35 +516,158 @@
 
 
     #shoppingPage #mainSida2 div.KnapparKategorier button.kategoriKnapp {
-        height: 30px;
-        width: 60px;
-        background-color: #e3e3e3;
-        color: #e61d1d;
-        border-radius: 10px;
-        border:0;
+        height: 35px;
+        width: 90px;
+        background-color: #ffffff;
+        color: #2C3E50;
+        border: 1px solid #d6d6d6;
+        border-radius: 20px;
+        /* border:0; */
 
         font-family: 'PublicaSans';
-        font-weight: 400;
+        font-weight: 500;
         font-size: 12px;
         text-align: center;
         cursor: pointer;
     }
 
+    #shoppingPage #mainSida2 div.KnapparKategorier button.kategoriKnappHamburger {
+        margin-right: 35px;
+        height: 30px;
+        width: 40px;
+        border-radius: 10px;
+        background-color: #e61d1d;
+        color: #e61d1d;
+        border: 1px solid #e61d1d;
+        /* border:0;
+        background-color: #e61d1d; */
+        cursor: pointer;
+    }
+
+    #shoppingPage #mainSida2 div.KnapparKategorier button.kategoriKnappHamburger span {
+        padding-top: 2px;
+        padding-left: 1px;
+    }
+
+
+    /* ===================== */
+    /* BOTTOM NAVIGATION BAR */
+    /* ===================== */
 
     #shoppingPage nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
         width: 100%;
         height: 75px;
         background-color: white;
-        box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.025), 0 -3px 10px 0 rgba(0, 0, 0, 0.025);
-        border-radius: 15px;
-
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.07);
+        border-radius: 20px 20px 0 0;
         position: fixed;
         bottom: 0;
         left: 0;
         z-index: 1000;
     }
+    
+    #shoppingPage nav div.left,
+    #shoppingPage nav div.middle,
+    #shoppingPage nav div.right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex: 1;
+    }
+    
+    #shoppingPage nav button.navBtn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        padding: 6px 0;
+        flex: 1;
+        border: none;
+        background: none;
+        cursor: pointer;
+        border-radius: 12px;
+        -webkit-tap-highlight-color: transparent;
+        transition: background-color 200ms;
+    }
+    
+    #shoppingPage nav button.navBtn span.material-symbols-outlined {
+        font-size: 24px;
+        color: #b8b8b8;
+        transition: color 200ms, font-variation-settings 200ms;
+        font-variation-settings: 'FILL' 0, 'wght' 400;
+    }
+    
+    #shoppingPage nav button.navBtn p {
+        margin: 0;
+        font-family: 'PublicaSans', sans-serif;
+        font-size: 9px;
+        font-weight: 500;
+        color: #b8b8b8;
+        transition: color 200ms;
+        white-space: nowrap;
+    }
+    
+    #shoppingPage nav button.navBtn.active span.material-symbols-outlined {
+        color: #e61d1d;
+        font-variation-settings: 'FILL' 1, 'wght' 400;
+    }
+    
+    #shoppingPage nav button.navBtn.active p {
+        color: #e61d1d;
+    }
+    
+    #shoppingPage nav button.navBtnProfile {
+        gap: 4px;
+    }
+    
+    #shoppingPage nav button.navBtnProfile div.profileCircle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #f0f0f0;
+        border: 2px solid #e8e8e8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -12px;
+        transition: background-color 200ms, border-color 200ms, transform 200ms;
+    }
+    
+    #shoppingPage nav button.navBtnProfile div.profileCircle span.material-symbols-outlined {
+        font-size: 26px;
+        color: #b8b8b8;
+        font-variation-settings: 'FILL' 0, 'wght' 400;
+        transition: color 200ms, font-variation-settings 200ms;
+    }
+    
+    #shoppingPage nav button.navBtnProfile.active div.profileCircle {
+        background-color: #fdeaea;
+        border-color: #e61d1d;
+    }
+    
+    #shoppingPage nav button.navBtnProfile.active div.profileCircle span.material-symbols-outlined {
+        color: #e61d1d;
+        font-variation-settings: 'FILL' 1, 'wght' 400;
+    }
+    
+    #shoppingPage nav button.navBtnProfile.active p {
+        color: #e61d1d;
+    }
+    
+    #shoppingPage nav button.navBtnProfile:hover div.profileCircle {
+        transform: translateY(-2px);
+    }
+    
+    #shoppingPage #mainSida2 {
+        padding-bottom: 90px;
+    }
 }
-
 
 
 
