@@ -550,9 +550,7 @@
     }
 
 
-    /* ===================== */
-    /* BOTTOM NAVIGATION BAR */
-    /* ===================== */
+    /* NAV BAR */
 
     #shoppingPage nav {
         display: flex;
@@ -580,53 +578,50 @@
         flex: 1;
     }
     
-    #shoppingPage nav button.navBtn {
+    #shoppingPage nav a.navButton {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 2px;
+        gap: 4px;
         padding: 6px 0;
         flex: 1;
         border: none;
         background: none;
         cursor: pointer;
         border-radius: 12px;
-        -webkit-tap-highlight-color: transparent;
-        transition: background-color 200ms;
+        text-decoration: none;
     }
     
-    #shoppingPage nav button.navBtn span.material-symbols-outlined {
+    #shoppingPage nav a.navButton span.material-symbols-outlined {
         font-size: 24px;
         color: #b8b8b8;
-        transition: color 200ms, font-variation-settings 200ms;
         font-variation-settings: 'FILL' 0, 'wght' 400;
+        transition: color 200ms;
     }
     
-    #shoppingPage nav button.navBtn p {
+    #shoppingPage nav a.navButton p {
         margin: 0;
         font-family: 'PublicaSans', sans-serif;
         font-size: 9px;
         font-weight: 500;
         color: #b8b8b8;
-        transition: color 200ms;
         white-space: nowrap;
     }
     
-    #shoppingPage nav button.navBtn.active span.material-symbols-outlined {
+    #shoppingPage nav a.navButton.active span.material-symbols-outlined {
         color: #e61d1d;
         font-variation-settings: 'FILL' 1, 'wght' 400;
     }
     
-    #shoppingPage nav button.navBtn.active p {
+    #shoppingPage nav a.navButton.active p {
         color: #e61d1d;
     }
-    
-    #shoppingPage nav button.navBtnProfile {
+    #shoppingPage nav button.navButton {
         gap: 4px;
     }
     
-    #shoppingPage nav button.navBtnProfile div.profileCircle {
+    #shoppingPage nav button.navButton div.profileCircle {
         width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -639,33 +634,333 @@
         transition: background-color 200ms, border-color 200ms, transform 200ms;
     }
     
-    #shoppingPage nav button.navBtnProfile div.profileCircle span.material-symbols-outlined {
+    #shoppingPage nav button.navButton div.profileCircle span.material-symbols-outlined {
         font-size: 26px;
         color: #b8b8b8;
         font-variation-settings: 'FILL' 0, 'wght' 400;
         transition: color 200ms, font-variation-settings 200ms;
     }
     
-    #shoppingPage nav button.navBtnProfile.active div.profileCircle {
-        background-color: #fdeaea;
+    #shoppingPage nav button.navButton.active div.profileCircle {
         border-color: #e61d1d;
     }
     
-    #shoppingPage nav button.navBtnProfile.active div.profileCircle span.material-symbols-outlined {
+    #shoppingPage nav button.navButton.active div.profileCircle span.material-symbols-outlined {
         color: #e61d1d;
         font-variation-settings: 'FILL' 1, 'wght' 400;
     }
     
-    #shoppingPage nav button.navBtnProfile.active p {
+    #shoppingPage nav button.navButton.active p {
         color: #e61d1d;
     }
     
-    #shoppingPage nav button.navBtnProfile:hover div.profileCircle {
+    #shoppingPage nav button.navButton:hover div.profileCircle {
         transform: translateY(-2px);
     }
     
     #shoppingPage #mainSida2 {
         padding-bottom: 90px;
+    }
+
+
+
+
+    /* KÖP ORDER */
+
+    #purchase {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 2000;
+        opacity: 0;
+        transition: opacity 350ms ease;
+    }
+
+    #purchase.visible {
+        opacity: 1;
+    }
+
+    #purchaseWindow {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 425px;
+        z-index: 2001;
+        background-color: #ffffff;
+        border-radius: 28px 28px 0 0;
+        padding: 16px 24px 36px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        transform: translateY(100%);
+        /* transition: transform 400ms cubic-bezier(0.32, 0.72, 0, 1); */
+        transition: transform 400ms ease;
+    }
+
+    #purchaseWindow.visible {
+        transform: translateY(0);
+    }
+
+    #purchaseIcon {
+        font-size: 40px;
+        color: #e61d1d;
+        font-variation-settings: 'FILL' 1;
+    }
+
+    #purchaseTitel {
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        color: #1a1a1a;
+        margin: 0 0 4px 0;
+    }
+
+    #purchaseLitenText {
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #888888;
+        margin: 0 0 28px 0;
+    }
+
+    #purchaseDiv {
+        width: 100%;
+        background-color: #f7f7f7;
+        border-radius: 16px;
+        padding: 4px 16px;
+        margin-bottom: 28px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .purchaseRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 0;
+    }
+
+    .purchaseText {
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #888888;
+    }
+
+    .purchasePris {
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        color: #1a1a1a;
+    }
+
+    #purchaseCloseButton {
+        width: 100%;
+        height: 52px;
+        border-radius: 14px;
+        border: none;
+        background-color: #e61d1d;
+        color: white;
+        font-family: 'PublicaSans', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 200ms;
+    }
+
+    #purchaseCloseBtn:hover {
+        background-color: #ce1b1b;
+    }
+
+
+
+    /* SIDA 3 (MEDDELANDEN) */
+    /* SIDA 3 (MEDDELANDEN) */
+    /* SIDA 3 (MEDDELANDEN) */
+    /* SIDA 3 (MEDDELANDEN) */
+    /* SIDA 3 (MEDDELANDEN) */
+    /* SIDA 3 (MEDDELANDEN) */
+    /* SIDA 3 (MEDDELANDEN) */
+
+    #meddelandenPage {
+        background-color: #ffffff;
+        margin: 0;
+    }
+
+    #meddelandenPage header {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+        padding: 0 20px;
+        height: 75px;
+        display: flex;
+        align-items: center;
+    }
+
+    #meddelandenPage header h1 {
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        color: #1a1a1a;
+        margin: 0;
+    }
+
+    #meddelandenPage main {
+        display: block;
+        height: auto;
+        padding-bottom: 90px;
+    }
+
+
+    #meddelandenPage div.konversationer {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    #meddelandenPage div.konversation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 20px;
+        cursor: pointer;
+        border-bottom: 1px solid #f0f0f0;
+        transition: background-color 150ms;
+    }
+
+    #meddelandenPage div.konversation:hover {
+        background-color: #fafafa;
+    }
+
+
+    #meddelandenPage div.profilCircel {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        border-radius: 50%;
+        border: 2px solid #e8e8e8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        color: #e61d1d;
+    }
+
+    #meddelandenPage div.profilCircel span {
+        color: #e61d1d;
+        font-variation-settings: 'FILL' 1;
+    }
+
+
+    #meddelandenPage div.konvInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        overflow: hidden;
+    }
+
+    #meddelandenPage p.konvNamn {
+        margin: 0;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        color: #1a1a1a;
+    }
+
+    #meddelandenPage p.konvSenaste {
+        margin: 0;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        color: #888888;
+        overflow: hidden;
+    }
+
+   
+    #meddelandenPage nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+        width: 100%;
+        height: 75px;
+        background-color: white;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.07);
+        border-radius: 20px 20px 0 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    #meddelandenPage nav div.left,
+    #meddelandenPage nav div.middle,
+    #meddelandenPage nav div.right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex: 1;
+    }
+
+    #meddelandenPage nav .navButton {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        padding: 6px 0;
+        flex: 1;
+        border: none;
+        background: none;
+        cursor: pointer;
+        border-radius: 12px;
+        text-decoration: none;
+    }
+
+    #meddelandenPage nav .navButton span.material-symbols-outlined {
+        font-size: 24px;
+        color: #b8b8b8;
+        font-variation-settings: 'FILL' 0, 'wght' 400;
+        transition: color 200ms;
+    }
+
+    #meddelandenPage nav .navButton p {
+        margin: 0;
+        font-family: 'PublicaSans', sans-serif;
+        font-size: 9px;
+        font-weight: 500;
+        color: #b8b8b8;
+        white-space: nowrap;
+    }
+
+    #meddelandenPage nav .navButton.active span.material-symbols-outlined {
+        color: #e61d1d;
+        font-variation-settings: 'FILL' 1, 'wght' 400;
+    }
+
+    #meddelandenPage nav .navButton.active p {
+        color: #e61d1d;
+    }
+
+    #meddelandenPage nav .navButton div.profileCircle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #f0f0f0;
+        border: 2px solid #e8e8e8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -12px;
+    }
+
+    #meddelandenPage nav .navButton div.profileCircle span.material-symbols-outlined {
+        font-size: 26px;
+        color: #b8b8b8;
     }
 }
 

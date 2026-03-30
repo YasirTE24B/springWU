@@ -76,7 +76,7 @@
             <div class="annons">
                 <div class="annonsBild">
                     <div class="annonsBetyg">
-                        <p id="star">PIZZA</p>
+                        <p id="star">KEBAB</p>
                     </div>
 
                     <!-- <div class="annonsPlats">
@@ -85,14 +85,14 @@
                     <!-- <div class="annonsPris">
                         <p id="star">40:-</p>
                     </div> -->
-                    <img src="img/MatAnnonsBild1.png" alt="annons bild">
+                    <img src="img/MatAnnonsBild2.png" alt="annons bild">
                 </div>
                 <div class="annonsInfo">
-                    <h1 class="annonsTitel">Korv och bröd</h6>
-                    <p class="annonsUser">"Tappade aptiten och vill inte äta den längre"</p>
+                    <h1 class="annonsTitel">Kebabtallrik med extra sås</h6>
+                    <p class="annonsUser">"Sås med lite kebabtallrik"</p>
                     <button class="buybutton">KÖP NU</button>
                     <div class="annonsPris">
-                        <p id="star">40:-</p>
+                        <p id="star">99:-</p>
                     </div>
                 </div>
 
@@ -210,38 +210,76 @@
     
     <nav id="bottomNav">
         <div class="left">
-            <button class="navBtn active" data-label="Utforska">
+            <a href="sida2.html" class="navButton active">
                 <span class="material-symbols-outlined">explore</span>
                 <p>Utforska</p>
-            </button>
-     
-            <button class="navBtn" data-label="Meddelanden">
+            </a>
+    
+            <a href="sida3.html" class="navButton">
                 <span class="material-symbols-outlined">chat_bubble</span>
                 <p>Meddelanden</p>
-            </button>
+            </a>
         </div>
-     
+    
         <div class="middle">
-            <button class="navBtn navBtnProfile" data-label="Min profil">
+            <a href="#" class="navButton">
                 <div class="profileCircle">
                     <span class="material-symbols-outlined">person</span>
                 </div>
                 <p>Min profil</p>
-            </button>
+            </a>
         </div>
-     
+    
         <div class="right">
-            <button class="navBtn" data-label="Dina köp">
+            <a href="#" class="navButton">
                 <span class="material-symbols-outlined">shopping_bag</span>
                 <p>Dina köp</p>
-            </button>
-     
-            <button class="navBtn" data-label="Favoriter">
+            </a>
+    
+            <a href="#" class="navButton">
                 <span class="material-symbols-outlined">favorite</span>
                 <p>Favoriter</p>
-            </button>
+            </a>
         </div>
     </nav>
+
+
+
+
+
+    <div id="purchase"></div>
+
+        <div id="purchaseWindow">
+
+            <div id="purchaseIcon">
+                <span class="material-symbols-outlined" id="purchaseIcon">
+                    check_circle
+                </span> 
+            </div>
+
+            <h2 id="purchaseTitel">Grattis!</h2>
+            <p id="purchaseLitenText">Din order är bekräftad!</p>
+
+            <div id="purchaseDiv">
+                <div class="purchaseRow">
+                    <span class="purchaseText">Produkt</span>
+                    <span class="purchasePris" id="purchaseItemName">lalalal</span>
+                </div>
+                
+                <div class="purchaseRow">
+                    <span class="purchaseText">Pris</span>
+                    <span class="purchasePris" id="purchaseItemPrice">40kr</span>
+                </div>
+                
+                <div class="purchaseRow">
+                    <span class="purchaseText">Ordernummer</span>
+                    <span class="purchasePris" id="purchaseOrderNumber">6767-676767</span>
+                </div>
+            </div>
+
+        <button id="purchaseCloseButton">Stäng</button>
+    </div>
+
 
     <script src="js/script.js"></script>
 </body>
