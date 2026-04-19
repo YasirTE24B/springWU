@@ -1,11 +1,29 @@
-const navButtons = document.querySelectorAll('#bottomNav button.navBtn');
+const hamburgerButton   = document.getElementById('hamburgerButton');
+const sidebar        = document.getElementById('sidebar');
+const sidebarOverlay = document.getElementById('sidebarOverlay');
 
-navButtons.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        navButtons.forEach(function(b) { b.classList.remove('active'); });
-        btn.classList.add('active');
+function openSidebar() {
+    sidebarOverlay.style.display = 'block';
+    requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+            sidebar.classList.add('open');
+            sidebarOverlay.classList.add('visible');
+        });
     });
-});
+}
+
+function closeSidebar() {
+    sidebar.classList.remove('open');
+    sidebarOverlay.classList.remove('visible');
+
+    sidebar.addEventListener('transitionend', function handler() {
+        sidebarOverlay.style.display = 'none';
+        sidebar.removeEventListener('transitionend', handler);
+    });
+}
+
+hamburgerButton.addEventListener('click', openSidebar);
+sidebarOverlay.addEventListener('click', closeSidebar);
 
 
 // tagit lite från

@@ -20,20 +20,25 @@
     font-style: normal;
 }
 
+/* CSS variabel */
+:root {
+    --main-color: #e61d1d;
+}
+
 
 /* MOBIL */
-@media screen and (min-width: 1px) {
+@media screen and (max-width: 600px) {
     #landingPage {
         background-color: white;
         margin: 0;
     }
 
     #shoppingPage{
-        /* background-color: rgb(247, 246, 246); */
+        display: grid;
         background-color: #ffffff;
         margin:0;
 
-        /* grid-template-rows: 100px,100px,100px; */
+        /* grid-template-rows: 100px, 100px, 100px; */
         grid-template-areas: 
         "hd"
         "mn"
@@ -44,7 +49,6 @@
     }
 
     main {
-        /* grid-area: ma; */
         height: auto;
         display: flex;
         justify-content: center;
@@ -67,7 +71,7 @@
         text-align: center;
         font-family: 'PublicaSans', sans-serif;
         font-weight: 700;
-        color: #e61d1d;
+        color: var(--main-color);
         font-size: 3em;
         margin:0;
     }
@@ -76,7 +80,7 @@
         text-align: center;
         font-family: 'PublicaSans', sans-serif;
         font-weight: 400;
-        color: #e61d1d;
+        color: var(--main-color);
     }
 
     div.StartKnapp {
@@ -96,46 +100,22 @@
         align-self: center;
         width: 200px;
         border-radius: 10px;
-        border: 3px solid #e61d1d;
-        background-color: #e61d1d;
+        border: 3px solid var(--main-color);
+        background-color: var(--main-color);
         font-size: 18px;
         font-weight: 600;
         font-family: 'PublicaSans';
         color: white;
-        box-shadow: 0 4px 15px rgba(230, 34, 34, 0.235);
         cursor:pointer;
         text-decoration: none;
         justify-content: center;
         align-items: center;
     }
-    div.StartKnapp a.login {
-        display: flex;
-        height: 50px;
-        align-self: center;
-        width: 200px;
-        border-radius: 10px;
-        border: 3px solid #2C3E50;
-        background-color: white;
-        font-size: 18px;
-        font-weight: 600;
-        font-family: 'PublicaSans';
-        color: #2C3E50;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        cursor:pointer;
-        text-decoration: none;
-        justify-content: center;
-        align-items: center;
-    }
-    div.StartKnapp a.login:visited {
-        color: #2C3E50;
-    }
+
     div.StartKnapp a:visited {
         color: white;
     }
 
-    /* footer {
-        grid-area: ft;
-    } */
     div.pizzaBild {
         display: flex;
         margin:0;
@@ -182,7 +162,6 @@
 
     #shoppingPage div.annonser div.annons {
         width: 340px;
-        flex-shrink: 0;
         height: 350px;
         background-color: white;
         border-radius: 20px;
@@ -202,7 +181,7 @@
         font-weight: 700;
         font-style: italic;
         margin-left: 20px;
-        /* color: #e61d1d; */
+        /* color: var(--main-color); */
         color: #1a1a1a;
     }
 
@@ -245,7 +224,7 @@
         justify-content:space-evenly;
         align-items: center;
         margin:0;
-        background-color: #e61d1d;
+        background-color: var(--main-color);
         width: 65px;
         height: 40px;
         border-radius: 7.5px;
@@ -256,8 +235,8 @@
         z-index: 10;
     }
 
-    #shoppingPage div.annonser div.annons div.annonsBild div.annonsBetyg #star {
-        color: #e61d1d;
+    #shoppingPage div.annonser div.annons div.annonsBild div.annonsBetyg .star {
+        color: var(--main-color);
         font-weight: 600;
         font-size: 12px;
         font-family: 'PublicaSans';
@@ -265,7 +244,7 @@
         
     }
 
-    #shoppingPage div.annonser div.annons div.annonsBild div.annonsPris #star {
+    #shoppingPage div.annonser div.annons div.annonsBild div.annonsPris .star {
         color: #ffffff;
         font-weight: 600;
         font-size: 18px;
@@ -301,7 +280,7 @@
         font-family: 'PublicaSans';
         font-weight: 400;
         font-size: 14px;
-        color:#e61d1d;
+        color:var(--main-color);
     }
 
     #shoppingPage div.annonser div.annons div.annonsInfo p.annonsUser {
@@ -320,7 +299,7 @@
         height: 35px;
         border-radius: 10px;
         border:0;
-        background-color: #e61d1d;
+        background-color: var(--main-color);
         color: white;
         font-family: 'PublicaSans', sans-serif;
         font-size: 16px;
@@ -366,7 +345,7 @@
     }
     
     #shoppingPage div.annonser div.annons div.annonsInfo div.annonsPris p {
-        color: #e61d1d;
+        color: var(--main-color);
         font-weight: 600;
         font-size: 28px;
         font-family: 'PublicaSans';
@@ -392,7 +371,7 @@
         font-size: 16px;
 
         text-decoration-line: underline;
-        text-decoration-color: #e61d1d;
+        text-decoration-color: var(--main-color);
         text-decoration-thickness: 5px;
     }
 
@@ -412,11 +391,11 @@
         font-size: 20px;
 
         text-decoration-line: underline;
-        text-decoration-color: #e61d1d;
+        text-decoration-color: var(--main-color);
         text-decoration-thickness: 3px;
     }
 
-    header div.nuvarandePlats {
+    header div.headerDiv {
         display: flex;
         align-items: center;
         gap: 3px;
@@ -427,7 +406,7 @@
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
     }
 
-    #shoppingPage div.nuvarandePlats button.platsIkon {
+    #shoppingPage div.headerDiv button.hamburgerIkon {
         width: 32px;
         height: 32px;
         margin-right: 7px;
@@ -436,41 +415,45 @@
         border: none;
         cursor: pointer;
         
+        background-color: #ffffff;
         
         display: inline-flex;
         align-items: center;
         justify-content: center;
         padding: 0; 
     }
-    #shoppingPage div.nuvarandePlats button.platsIkon:hover {
-        background-color: #d6d6d6;
-    }
-    #shoppingPage button.platsIkon {
+
+    #shoppingPage button.hamburgerIkon {
         width: 25px;
         height: 25px;
         border-radius: 4px;
+        border: 0;
         opacity: 100%;
+        display: block;
     }
 
-    #shoppingPage div.nuvarandePlats h1 {
+    #shoppingPage div.headerDiv #leftovers2 {
         text-align: left;
         font-family: 'PublicaSans', sans-serif;
         font-weight: 700;
-        color: #e61d1d;
-        font-size: 2em;
+        color: var(--main-color);
+        font-size: 32px;
         margin:0;
         line-height: 0.8;
+        text-decoration: none;
     }
 
-    #shoppingPage div.nuvarandePlats #leftovers {
+    #shoppingPage div.headerDiv #leftovers {
         font-family: 'PublicaSans', sans-serif;
         font-weight: 300;
-        color: #e61d1d;
+        color: var(--main-color);
         margin:0;
         line-height: 1;
+        font-size: 18px;
+        text-decoration: none;
     }
 
-    #shoppingPage div.nuvarandePlats div.loggaochplats {
+    #shoppingPage div.headerDiv div.loggaochplats {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -480,14 +463,14 @@
         margin-top: 5px;
     }
 
-    #shoppingPage header div.nuvarandePlats .p-header {
+    #shoppingPage header div.headerDiv .p-header {
         margin: 0;
         display: inline;
         font-family: 'PublicaSans';
         font-weight: 700;
         font-size: 16px;
     }
-    #shoppingPage header div.nuvarandePlats .p-header2 {
+    #shoppingPage header div.headerDiv .p-header2 {
         font-family: 'PublicaSans';
         font-weight: 400;
         font-size: 16px;
@@ -496,11 +479,103 @@
         padding-left: 10px;
     }
 
-    #shoppingPage div.nuvarandePlats button.platsIkon span {
-        font-size: 20px;
+    #shoppingPage div.headerDiv button.hamburgerIkon span {
+        font-size: 30px;
         font-weight: 300;
-        pointer-events: none;
+        cursor: pointer;
+        color: var(--main-color);
+        font-variation-settings: 'wght' 400;
+        display: block;
     }
+
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: -320px;
+        width: 280px;
+        height: 100%;
+        background-color: white;
+        box-shadow: 4px 0 20px rgba(0,0,0,0.1);
+        z-index: 999999;
+        padding: 30px 20px;
+        transition: left 350ms linear;
+        font-family: 'PublicaSans', sans-serif;
+    }
+    
+    #sidebar.open {
+        left: 0;
+    }
+    
+    #sidebarOverlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0,0,0,0.4);
+        z-index: 998999;
+        opacity: 0;
+        transition: opacity 350ms linear;
+    }
+    
+    #sidebarOverlay.visible {
+        opacity: 1;
+    }
+
+    .filter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    /* TOGGLESWITCH FRÅN W3SCHOOLS https://www.w3schools.com/howto/howto_css_switch.asp */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 26px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: #ccc;
+        transition: 0.3s;
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.3s;
+    }
+    
+    .switch input:checked + .slider {
+        background-color: var(--main-color);
+    }
+    
+    .switch input:checked + .slider:before {
+        transform: translateX(24px);
+    }
+    
+    .slider.round {
+        border-radius: 26px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
 
     #shoppingPage #mainSida2 div.KnapparKategorier {
         display: flex;
@@ -516,7 +591,7 @@
     #shoppingPage #mainSida2 div.KnapparKategorier button.kategoriKnappAlla {
         height: 35px;
         width: 90px;
-        background-color: #e61d1d;
+        background-color: var(--main-color);
         color: white;
         border-radius: 20px;
         border:0;
@@ -550,11 +625,11 @@
         height: 30px;
         width: 40px;
         border-radius: 10px;
-        background-color: #e61d1d;
-        color: #e61d1d;
-        border: 1px solid #e61d1d;
+        background-color: var(--main-color);
+        color: var(--main-color);
+        border: 1px solid var(--main-color);
         /* border:0;
-        background-color: #e61d1d; */
+        background-color: var(--main-color); */
         cursor: pointer;
     }
 
@@ -579,7 +654,7 @@
         position: fixed;
         bottom: 0;
         left: 0;
-        z-index: 1000;
+        z-index: 9999;
     }
     
     #shoppingPage nav div.left,
@@ -597,7 +672,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 4px;
+        gap: 2px;
         padding: 6px 0;
         flex: 1;
         border: none;
@@ -610,8 +685,6 @@
     #shoppingPage nav a.navButton span.material-symbols-outlined {
         font-size: 24px;
         color: #575757;
-        font-variation-settings: 'FILL' 0, 'wght' 400;
-        transition: color 200ms;
     }
     
     #shoppingPage nav a.navButton p {
@@ -623,14 +696,7 @@
         white-space: nowrap;
     }
     
-    #shoppingPage nav a.navButton.active span.material-symbols-outlined {
-        color: #e61d1d;
-        font-variation-settings: 'FILL' 1, 'wght' 400;
-    }
-    
-    #shoppingPage nav a.navButton.active p {
-        color: #e61d1d;
-    }
+
 
     #shoppingPage nav button.navButton {
         gap: 4px;
@@ -640,20 +706,6 @@
         font-size: 26px;
         color: #575757;
         font-variation-settings: 'FILL' 0, 'wght' 400;
-        transition: color 200ms, font-variation-settings 200ms;
-    }
-    
-    #shoppingPage nav a.navButton.active div.profileCircle {
-        border-color: #e61d1d;
-    }
-    
-    #shoppingPage nav a.navButton.active div.profileCircle span.material-symbols-outlined {
-        color: #e61d1d;
-        font-variation-settings: 'FILL' 1, 'wght' 400;
-    }
-    
-    #shoppingPage nav a.navButton.active p {
-        color: #e61d1d;
     }
     
     
@@ -671,9 +723,9 @@
         position: fixed;
         inset: 0;
         background-color: rgba(0, 0, 0, 0.4);
-        z-index: 2000;
+        z-index: 99;
         opacity: 0;
-        transition: opacity 350ms ease;
+        transition: opacity 350ms linear;
     }
 
     #purchase.visible {
@@ -684,8 +736,8 @@
         position: fixed;
         bottom: 0;
         left: 0;
-        width: 425px;
-        z-index: 2001;
+        width: stretch;
+        z-index: 99999999;
         background-color: #ffffff;
         border-radius: 28px 28px 0 0;
         padding: 16px 24px 36px 24px;
@@ -694,17 +746,16 @@
         align-items: center;
 
         transform: translateY(100%);
-        /* transition: transform 400ms cubic-bezier(0.32, 0.72, 0, 1); */
-        transition: transform 400ms ease;
+        transition: transform 400ms linear;
     }
 
     #purchaseWindow.visible {
         transform: translateY(0);
     }
 
-    #purchaseIcon {
+    #purchaseIcon2 {
         font-size: 40px;
-        color: #e61d1d;
+        color: var(--main-color);
         font-variation-settings: 'FILL' 1;
     }
 
@@ -720,12 +771,12 @@
         font-family: 'PublicaSans', sans-serif;
         font-weight: 400;
         font-size: 14px;
-        color: #888888;
+        color: #535353;
         margin: 0 0 28px 0;
     }
 
     #purchaseDiv {
-        width: 100%;
+        width: 98%;
         background-color: #f7f7f7;
         border-radius: 16px;
         padding: 4px 16px;
@@ -760,16 +811,15 @@
         height: 52px;
         border-radius: 14px;
         border: none;
-        background-color: #e61d1d;
+        background-color: var(--main-color);
         color: white;
         font-family: 'PublicaSans', sans-serif;
         font-size: 16px;
         font-weight: 600;
         cursor: pointer;
-        transition: background-color 200ms;
     }
 
-    #purchaseCloseBtn:hover {
+    #purchaseCloseButton:hover {
         background-color: #ce1b1b;
     }
 
@@ -825,7 +875,6 @@
         padding: 14px 20px;
         cursor: pointer;
         border-bottom: 1px solid #f0f0f0;
-        transition: background-color 150ms;
     }
 
     #meddelandenPage div.konversation:hover {
@@ -845,11 +894,11 @@
         font-family: 'PublicaSans', sans-serif;
         font-weight: 700;
         font-size: 18px;
-        color: #e61d1d;
+        color: var(--main-color);
     }
 
     #meddelandenPage div.profilCircel span {
-        color: #e61d1d;
+        color: var(--main-color);
         font-variation-settings: 'FILL' 1;
     }
 
@@ -892,7 +941,7 @@
         position: fixed;
         bottom: 0;
         left: 0;
-        z-index: 1000;
+        z-index: 999;
     }
 
     #meddelandenPage nav div.left,
@@ -924,7 +973,6 @@
         font-size: 24px;
         color: #575757;
         font-variation-settings: 'FILL' 0, 'wght' 400;
-        transition: color 200ms;
     }
 
     #meddelandenPage nav .navButton p {
@@ -934,15 +982,6 @@
         font-weight: 500;
         color: #575757;
         white-space: nowrap;
-    }
-
-    #meddelandenPage nav .navButton.active span.material-symbols-outlined {
-        color: #e61d1d;
-        font-variation-settings: 'FILL' 1, 'wght' 400;
-    }
-
-    #meddelandenPage nav .navButton.active p {
-        color: #e61d1d;
     }
 
     #meddelandenPage nav .navButton div.profileCircle span.material-symbols-outlined {
@@ -957,10 +996,6 @@
     /* SIDA 4 */
     /* SIDA 4 */
     /* SIDA 4 */
-
-        /* ========================= */
-    /* SHARED PLAIN HEADER       */
-    /* ========================= */
 
     #profilPage header,
     #dinaKopPage header,
@@ -990,7 +1025,6 @@
         padding-bottom: 90px;
     }
 
-    /* SHARED NAV (same rules as meddelandenPage) */
     #profilPage nav,
     #dinaKopPage nav,
     #favoriterPage nav {
@@ -1006,7 +1040,7 @@
         position: fixed;
         bottom: 0;
         left: 0;
-        z-index: 1000;
+        z-index: 999;
     }
 
     #profilPage nav div.left,
@@ -1040,7 +1074,6 @@
         cursor: pointer;
         border-radius: 12px;
         text-decoration: none;
-        -webkit-tap-highlight-color: transparent;
     }
 
     #profilPage nav .navButton span.material-symbols-outlined,
@@ -1049,7 +1082,6 @@
         font-size: 24px;
         color: #535353;
         font-variation-settings: 'FILL' 0, 'wght' 400;
-        transition: color 200ms;
     }
 
     #profilPage nav .navButton p,
@@ -1063,19 +1095,6 @@
         white-space: nowrap;
     }
 
-    #profilPage nav .navButton.active span.material-symbols-outlined,
-    #dinaKopPage nav .navButton.active span.material-symbols-outlined,
-    #favoriterPage nav .navButton.active span.material-symbols-outlined {
-        color: #e61d1d;
-        font-variation-settings: 'FILL' 1, 'wght' 400;
-    }
-
-    #profilPage nav .navButton.active p,
-    #dinaKopPage nav .navButton.active p,
-    #favoriterPage nav .navButton.active p {
-        color: #e61d1d;
-    }
-
 
     #profilPage nav .navButton div.profileCircle span.material-symbols-outlined,
     #dinaKopPage nav .navButton div.profileCircle span.material-symbols-outlined,
@@ -1084,22 +1103,7 @@
         color: #535353;
     }
 
-    #profilPage nav .navButton.active div.profileCircle,
-    #dinaKopPage nav .navButton.active div.profileCircle,
-    #favoriterPage nav .navButton.active div.profileCircle {
-        border-color: #e61d1d;
-    }
-
-    #profilPage nav .navButton.active div.profileCircle span.material-symbols-outlined,
-    #dinaKopPage nav .navButton.active div.profileCircle span.material-symbols-outlined,
-    #favoriterPage nav .navButton.active div.profileCircle span.material-symbols-outlined {
-        color: #e61d1d;
-    }
-
-
-    /* ========================= */
-    /* MIN PROFIL                */
-    /* ========================= */
+    /* MIN PROFIL */
 
     #profilPage {
         background-color: #ffffff;
@@ -1117,21 +1121,20 @@
     #profilPage div.profilAvatar {
         width: 80px;
         height: 80px;
-        border-radius: 50%;
-        background-color: #fdeaea;
-        border: 2px solid #e8e8e8;
+        border-radius: 100%;
+        border: 2px solid #535353;
         display: flex;
         align-items: center;
         justify-content: center;
         font-family: 'PublicaSans', sans-serif;
         font-weight: 700;
         font-size: 32px;
-        color: #e61d1d;
+        color: var(--main-color);
         margin-bottom: 8px;
     }
 
     #profilPage div.profilAvatar span{
-        color: #e61d1d;
+        color: var(--main-color);
         font-variation-settings: 'FILL' 1, 'wght' 400;
         font-size: 36px;
     }
@@ -1197,13 +1200,10 @@
 
     #profilPage div.profilRadLogout span.material-symbols-outlined,
     #profilPage div.profilRadLogout p {
-        color: #e61d1d;
+        color: var(--main-color);
     }
 
-
-    /* ========================= */
-    /* DINA KÖP                  */
-    /* ========================= */
+    /* DINA KÖP*/
 
     #dinaKopPage {
         background-color: #ffffff;
@@ -1238,7 +1238,6 @@
         height: 64px;
         border-radius: 10px;
         overflow: hidden;
-        flex-shrink: 0;
     }
 
     #dinaKopPage div.kopBild img {
@@ -1266,7 +1265,7 @@
         font-family: 'PublicaSans', sans-serif;
         font-weight: 700;
         font-size: 15px;
-        color: #e61d1d;
+        color: var(--main-color);
     }
 
     #dinaKopPage p.kopOrderNr {
@@ -1274,10 +1273,9 @@
         font-family: 'PublicaSans', sans-serif;
         font-weight: 400;
         font-size: 12px;
-        color: #aaaaaa;
+        color: #535353;
     }
 
-    /* Shipping tracker */
     #dinaKopPage div.kopTracker {
         display: flex;
         flex-direction: row;
@@ -1290,21 +1288,19 @@
         flex-direction: column;
         align-items: center;
         gap: 6px;
-        flex-shrink: 0;
     }
 
     #dinaKopPage div.trackerCircel {
         width: 14px;
         height: 14px;
-        border-radius: 50%;
-        border: 2px solid #dddddd;
+        border-radius: 100%;
+        border: 2px solid #535353;
         background-color: white;
-        transition: background-color 200ms, border-color 200ms;
     }
 
     #dinaKopPage div.trackerSteg.aktivt div.trackerCircel {
-        background-color: #e61d1d;
-        border-color: #e61d1d;
+        background-color: var(--main-color);
+        border-color: var(--main-color);
     }
 
     #dinaKopPage div.trackerSteg p {
@@ -1312,30 +1308,27 @@
         font-family: 'PublicaSans', sans-serif;
         font-weight: 400;
         font-size: 10px;
-        color: #aaaaaa;
+        color: #535353;
         white-space: nowrap;
     }
 
     #dinaKopPage div.trackerSteg.aktivt p {
-        color: #e61d1d;
+        color: var(--main-color);
         font-weight: 600;
     }
 
     #dinaKopPage div.trackerLinje {
         flex: 1;
         height: 2px;
-        background-color: #eeeeee;
+        background-color: #535353;
         margin-bottom: 16px;
     }
 
     #dinaKopPage div.trackerLinje.aktivt {
-        background-color: #e61d1d;
+        background-color: var(--main-color);
     }
 
-
-    /* ========================= */
-    /* FAVORITER                 */
-    /* ========================= */
+    /* FAVORITER*/
 
     #favoriterPage {
         background-color: #ffffff;
@@ -1347,11 +1340,12 @@
         flex-wrap: wrap;
         gap: 16px;
         padding: 20px;
-        justify-content: space-between;
+        justify-content: center;
+        
     }
 
     #favoriterPage div.annons {
-        width: calc(50% - 8px);
+        width: 340px;
         height: 350px;
         background-color: white;
         border-radius: 20px;
@@ -1359,7 +1353,1180 @@
         cursor: pointer;
         border: 2px solid #eeeeee;
         transition: box-shadow 500ms;
-        flex-shrink: 0;
+    }
+
+    #favoriterPage div.annons:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    #favoriterPage div.annonsBild {
+        width: 100%;
+        height: 180px;
+        border-radius: 18px 18px 0 0;
+        overflow: hidden;
+    }
+
+    #favoriterPage div.annonsBild img {
+        width: 100%;
+        height: auto;
+    }
+
+    #favoriterPage div.annonsBetyg {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: white;
+        width: 65px;
+        height: 25px;
+        border-radius: 20px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
+    }
+
+    #favoriterPage div.annonsBetyg .star {
+        color: var(--main-color);
+        font-weight: 600;
+        font-size: 12px;
+        font-family: 'PublicaSans';
+        margin-top: 10px;
+    }
+
+    #favoriterPage div.annonsInfo {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #favoriterPage h1.annonsTitel {
+        margin: 6px 8px 0 8px;
+        font-family: 'PublicaSans';
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    #favoriterPage p.annonsUser {
+        color: #535353;
+        font-family: 'PublicaSans';
+        font-weight: 400;
+        font-size: 12px;
+        position: absolute;
+        top: 210px;
+        left: 8px;
+        right: 8px;
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    #favoriterPage div.annonsPris p {
+        color: var(--main-color);
+        font-weight: 600;
+        font-size: 28px;
+        font-family: 'PublicaSans';
+        position: absolute;
+        margin: 0;
+        bottom: 10px;
+        left: 8px;
+    }
+
+    #favoriterPage button.buybutton {
+        width: 100px;
+        height: 35px;
+        border-radius: 10px;
+        border: 0;
+        background-color: var(--main-color);
+        color: white;
+        font-family: 'PublicaSans', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        position: absolute;
+        right: 8px;
+        bottom: 10px;
+        cursor: pointer;
+    }
+
+    #favoriterPage button.buybutton:hover {
+        background-color: #ce1b1b;
+    }
+
+
+    /* denna letar i html sidan du är inne på och kollar om t.ex #shoppingPage finns, om den finns så fylls den rött. annars gör den ingenting*/
+    #shoppingPage   #bottomNav a[href="sida2.html"] span,
+    #shoppingPage   #bottomNav a[href="sida2.html"] p,
+    #meddelandenPage #bottomNav a[href="meddelanden.html"] span,
+    #meddelandenPage #bottomNav a[href="meddelanden.html"] p,
+    #profilPage     #bottomNav a[href="minprofil.html"] span,
+    #profilPage     #bottomNav a[href="minprofil.html"] p,
+    #dinaKopPage    #bottomNav a[href="dinakop.html"] span,
+    #dinaKopPage    #bottomNav a[href="dinakop.html"] p,
+    #favoriterPage  #bottomNav a[href="favoriter.html"] span,
+    #favoriterPage  #bottomNav a[href="favoriter.html"] p  {
+        color: var(--main-color);
+        font-variation-settings: 'FILL' 1, 'wght' 400;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* DESKTOP */
+/* DESKTOP */
+/* DESKTOP */
+/* DESKTOP */
+/* DESKTOP */
+/* DESKTOP */
+/* DESKTOP */
+
+@media screen and (min-width: 600px) {
+    body {
+        background-color: white;
+        margin: 0;
+    }
+
+    main {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* SIDA 1 HÄR!!! */
+    /* SIDA 1 HÄR!!! */
+    /* SIDA 1 HÄR!!! */
+
+    #landingPage {
+        background-color: white;
+        margin: 0;
+    }
+
+    div.introText {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+        margin-top: 80px;
+        width: 100%;
+        height: 100px;
+    }
+    div.introText h1 {
+        text-align: center;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 700;
+        color: var(--main-color);
+        font-size: 3em;
+        margin: 0;
+    }
+    div.introText p {
+        margin: 0;
+        text-align: center;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 400;
+        color: var(--main-color);
+    }
+
+    div.StartKnapp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 125px;
+        gap: 30px;
+    }
+    div.StartKnapp a {
+        display: flex;
+        height: 50px;
+        align-self: center;
+        width: 200px;
+        border-radius: 10px;
+        border: 3px solid var(--main-color);
+        background-color: var(--main-color);
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'PublicaSans';
+        color: white;
+        box-shadow: 0 4px 15px rgba(230, 34, 34, 0.235);
+        cursor: pointer;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+    }
+    div.StartKnapp a:visited { 
+        color: white; 
+    }
+
+    div.pizzaBild {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: end;
+        width: 100%;
+        height: 250px;
+        margin-top: auto;
+    }
+    div.pizzaBild img {
+        max-height: 100%;
+        width: auto;
+        margin-top: 200px;
+    }
+
+    /* SHOPPING PAGE */
+
+    #shoppingPage {
+        background-color: #ffffff;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        grid-template-rows: 75px 1fr 75px;
+        grid-template-areas:
+            "hd hd"
+            "sb mn"
+            "nv nv";
+        height: 100vh;
+        overflow-x: clip;
+    }
+
+    #shoppingPage header {
+        grid-area: hd;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+        z-index: 100;
+    }
+
+    #shoppingPage header div.headerDiv {
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        margin-left: 16px;
+        height: 100%;
+    }
+
+    #shoppingPage div.headerDiv div.loggaochplats {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 75px;
+        margin-top: 0;
+    }
+
+    #shoppingPage div.headerDiv #leftovers2 {
+        text-align: left;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 700;
+        color: var(--main-color);
+        font-size: 32px;
+        margin: 0;
+        line-height: 0.8;
+        text-decoration: none;
+    }
+
+    #shoppingPage div.headerDiv #leftovers {
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 300;
+        color: var(--main-color);
+        margin: 0;
+        line-height: 1;
+        font-size: 18px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    #sidebarOverlay,
+    #hamburgerButton,
+    #sidebar {
+        display: none;
+    }
+
+    #shoppingPage button.hamburgerIkon,
+    #shoppingPage div.headerDiv button.hamburgerIkon span {
+        display: none;
+    }
+
+    #sidebar2 {
+        grid-area: sb;
+        width: auto;
+        height: 100%;
+        background-color: #ffffff;
+        border-right: 1px solid #eeeeee;
+        padding: 24px 20px;
+        display: block;
+        font-family: 'PublicaSans', sans-serif;
+    }
+
+    #sidebar2 h2 {
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        color: #1a1a1a;
+        margin: 0 0 20px 0;
+    }
+
+    #sidebar2 p {
+        font-family: 'PublicaSans', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #1a1a1a;
+        margin: 0;
+    }
+
+    .filter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    /* TOGGLESWITCH FRÅN W3SCHOOLS https://www.w3schools.com/howto/howto_css_switch.asp */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 26px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: #ccc;
+        transition: 0.3s;
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.3s;
+    }
+    
+    .switch input:checked + .slider {
+        background-color: var(--main-color);
+    }
+    
+    .switch input:checked + .slider:before {
+        transform: translateX(24px);
+    }
+    
+    .slider.round {
+        border-radius: 26px;
+    }
+    
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
+
+
+    #mainSida2 {
+        grid-area: mn;
+        overflow-y: auto;
+    }
+
+    #shoppingPage #mainSida2 {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        margin: 0;
+    }
+
+    #shoppingPage main h1.h1titel {
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 700;
+        font-style: italic;
+        margin-left: 20px;
+        color: #1a1a1a;
+    }
+
+    #shoppingPage #mainSida2 div.KnapparKategorier {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    #shoppingPage #mainSida2 div.KnapparKategorier button.kategoriKnappAlla {
+        height: 35px;
+        width: 90px;
+        background-color: var(--main-color);
+        color: white;
+        border-radius: 20px;
+        border: 0;
+        font-family: 'PublicaSans';
+        font-weight: 500;
+        font-size: 12px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #shoppingPage #mainSida2 div.KnapparKategorier button.kategoriKnapp {
+        height: 35px;
+        width: 90px;
+        background-color: #ffffff;
+        color: #575757;
+        border: 1px solid #d6d6d6;
+        border-radius: 20px;
+        font-family: 'PublicaSans';
+        font-weight: 500;
+        font-size: 12px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    /* Annonser */
+
+    #shoppingPage #mainSida2 div.annonser {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 40px;
+        height: auto;
+        width: 100%;
+        gap: 20px;
+    }
+
+    #shoppingPage div.annonser div.annons {
+        min-width: 300px;
+        max-width: 301px;
+        height: 340px;
+        background-color: white;
+        border-radius: 20px;
+        position: relative;
+        cursor: pointer;
+        border: 2px solid #eeeeee;
+        transition: box-shadow 500ms;
+        overflow: hidden;
+    }
+
+    #shoppingPage div.annonser div.annons:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBild {
+        width: auto;
+        height: 200px;
+        border-radius: 18px 18px 0 0;
+        overflow: hidden;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBild img {
+        width: 100%;
+        height: auto;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBild div.annonsBetyg {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0;
+        background-color: white;
+        width: 65px;
+        height: 25px;
+        border-radius: 20px;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        z-index: 10;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBild div.annonsBetyg .star {
+        color: var(--main-color);
+        font-weight: 600;
+        font-size: 12px;
+        font-family: 'PublicaSans';
+        margin-top: 13px;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBild div.annonsPris {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0;
+        background-color: var(--main-color);
+        width: 65px;
+        height: 40px;
+        border-radius: 7.5px;
+        position: absolute;
+        bottom: 150px;
+        right: 15px;
+        z-index: 10;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsBild div.annonsPris .star {
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 18px;
+        font-family: 'PublicaSans';
+        margin-top: 20px;
+        font-style: italic;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsInfo {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsInfo h1.annonsTitel {
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-family: 'PublicaSans';
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsInfo p.annonsUser {
+        color: #575757;
+        font-family: 'PublicaSans';
+        font-weight: 400;
+        font-size: 12px;
+        position: absolute;
+        top: 230px;
+        left: 10px;
+        margin: 0;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsInfo button.buybutton {
+        width: 100px;
+        height: 35px;
+        border-radius: 10px;
+        border: 0;
+        background-color: var(--main-color);
+        color: white;
+        font-family: 'PublicaSans', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        cursor: pointer;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsInfo button.buybutton:hover {
+        background-color: #ce1b1b;
+    }
+
+    #shoppingPage div.annonser div.annons div.annonsInfo div.annonsPris p {
+        color: var(--main-color);
+        font-weight: 600;
+        font-size: 24px;
+        font-family: 'PublicaSans';
+        position: absolute;
+        margin: 0;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    #shoppingPage main div.bottenmellanrum {
+        width: 100%;
+        height: 10px;
+    }
+
+    /* PURCHASE */
+
+    #purchase {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 9000;
+        opacity: 0;
+        transition: opacity 350ms linear;
+    }
+
+    #purchase.visible {
+        opacity: 1;
+    }
+
+    #purchaseWindow {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+        z-index: 9999;
+        background-color: #ffffff;
+        border-radius: 28px 28px 0 0;
+        padding: 16px 24px 36px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(100%);
+        transition: transform 400ms linear;
+    }
+
+    #purchaseWindow.visible {
+        transform: translateY(0);
+    }
+
+    #purchaseIcon2 {
+        font-size: 40px;
+        color: var(--main-color);
+        font-variation-settings: 'FILL' 1;
+    }
+
+    #purchaseTitel {
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        color: #1a1a1a;
+        margin: 0 0 4px 0;
+    }
+
+    #purchaseLitenText {
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #535353;
+        margin: 0 0 28px 0;
+    }
+
+    #purchaseDiv {
+        width: 98%;
+        background-color: #f7f7f7;
+        border-radius: 16px;
+        padding: 4px 16px;
+        margin-bottom: 28px;
+    }
+
+    .purchaseRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 0;
+    }
+
+    .purchaseText {
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #565656;
+    }
+
+    .purchasePris {
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        color: #1a1a1a;
+    }
+
+    #purchaseCloseButton {
+        width: 100%;
+        height: 52px;
+        border-radius: 14px;
+        border: none;
+        background-color: var(--main-color);
+        color: white;
+        font-family: 'PublicaSans', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    #purchaseCloseButton:hover {
+        background-color: #ce1b1b;
+    }
+
+
+    /* NAV BAREN */
+
+    #shoppingPage nav,
+    #meddelandenPage nav,
+    #profilPage nav,
+    #dinaKopPage nav,
+    #favoriterPage nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+        width: 100%;
+        height: 75px;
+        background-color: white;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.07);
+        border-radius: 20px 20px 0 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 9999;
+    }
+
+    #shoppingPage nav div.left,
+    #shoppingPage nav div.middle,
+    #shoppingPage nav div.right,
+    #meddelandenPage nav div.left,
+    #meddelandenPage nav div.middle,
+    #meddelandenPage nav div.right,
+    #profilPage nav div.left,
+    #profilPage nav div.middle,
+    #profilPage nav div.right,
+    #dinaKopPage nav div.left,
+    #dinaKopPage nav div.middle,
+    #dinaKopPage nav div.right,
+    #favoriterPage nav div.left,
+    #favoriterPage nav div.middle,
+    #favoriterPage nav div.right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex: 1;
+    }
+
+    #shoppingPage nav a.navButton,
+    #meddelandenPage nav a.navButton,
+    #profilPage nav a.navButton,
+    #dinaKopPage nav a.navButton,
+    #favoriterPage nav a.navButton {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        padding: 6px 0;
+        flex: 1;
+        border: none;
+        background: none;
+        cursor: pointer;
+        border-radius: 12px;
+        text-decoration: none;
+    }
+
+    #shoppingPage nav a.navButton span.material-symbols-outlined,
+    #meddelandenPage nav a.navButton span.material-symbols-outlined,
+    #profilPage nav a.navButton span.material-symbols-outlined,
+    #dinaKopPage nav a.navButton span.material-symbols-outlined,
+    #favoriterPage nav a.navButton span.material-symbols-outlined {
+        font-size: 24px;
+        color: #575757;
+        font-variation-settings: 'FILL' 0, 'wght' 400;
+    }
+
+    #shoppingPage nav a.navButton p,
+    #meddelandenPage nav a.navButton p,
+    #profilPage nav a.navButton p,
+    #dinaKopPage nav a.navButton p,
+    #favoriterPage nav a.navButton p {
+        margin: 0;
+        font-family: 'PublicaSans', sans-serif;
+        font-size: 9px;
+        font-weight: 500;
+        color: #575757;
+        white-space: nowrap;
+    }
+
+    #shoppingPage nav a.navButton div.profileCircle span.material-symbols-outlined,
+    #meddelandenPage nav a.navButton div.profileCircle span.material-symbols-outlined,
+    #profilPage nav a.navButton div.profileCircle span.material-symbols-outlined,
+    #dinaKopPage nav a.navButton div.profileCircle span.material-symbols-outlined,
+    #favoriterPage nav a.navButton div.profileCircle span.material-symbols-outlined {
+        font-size: 26px;
+        color: #575757;
+        font-variation-settings: 'FILL' 0, 'wght' 400;
+    }
+
+    /* denna letar i html sidan du är inne på och kollar om t.ex #shoppingPage finns, om den finns så fylls den rött. annars gör den ingenting*/
+    #shoppingPage   #bottomNav a[href="sida2.html"] span,
+    #shoppingPage   #bottomNav a[href="sida2.html"] p,
+    #meddelandenPage #bottomNav a[href="meddelanden.html"] span,
+    #meddelandenPage #bottomNav a[href="meddelanden.html"] p,
+    #profilPage     #bottomNav a[href="minprofil.html"] span,
+    #profilPage     #bottomNav a[href="minprofil.html"] p,
+    #dinaKopPage    #bottomNav a[href="dinakop.html"] span,
+    #dinaKopPage    #bottomNav a[href="dinakop.html"] p,
+    #favoriterPage  #bottomNav a[href="favoriter.html"] span,
+    #favoriterPage  #bottomNav a[href="favoriter.html"] p {
+        color: var(--main-color);
+        font-variation-settings: 'FILL' 1, 'wght' 400;
+    }
+
+
+    #profilPage header,
+    #dinaKopPage header,
+    #favoriterPage header,
+    #meddelandenPage header {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+        padding: 0 20px;
+        height: 75px;
+        display: flex;
+        align-items: center;
+    }
+
+    #profilPage header h1,
+    #dinaKopPage header h1,
+    #favoriterPage header h1,
+    #meddelandenPage header h1 {
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 700;
+        font-size: 1.6em;
+        color: #1a1a1a;
+        margin: 0;
+    }
+
+    #profilPage main,
+    #dinaKopPage main,
+    #favoriterPage main,
+    #meddelandenPage main {
+        display: block;
+        height: auto;
+        padding-bottom: 90px;
+    }
+
+
+    /* MEDDELANDEN */
+
+    #meddelandenPage {
+        background-color: #ffffff;
+        margin: 0;
+    }
+
+    #meddelandenPage div.konversationer {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    #meddelandenPage div.konversation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 20px;
+        cursor: pointer;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    #meddelandenPage div.konversation:hover {
+        background-color: #fafafa;
+    }
+
+    #meddelandenPage div.profilCircel {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        border-radius: 100%;
+        border: 2px solid #e8e8e8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        color: var(--main-color);
+    }
+
+    #meddelandenPage div.profilCircel span {
+        color: var(--main-color);
+        font-variation-settings: 'FILL' 1;
+    }
+
+    #meddelandenPage div.konvInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        overflow: hidden;
+    }
+
+    #meddelandenPage p.konvNamn {
+        margin: 0;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        color: #1a1a1a;
+    }
+
+    #meddelandenPage p.konvSenaste {
+        margin: 0;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        color: #575757;
+        overflow: hidden;
+    }
+
+    /* MIN PROFIL */
+
+    #profilPage {
+        background-color: #ffffff;
+        margin: 0;
+    }
+
+    #profilPage div.profilTopp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px 24px 20px;
+        gap: 6px;
+    }
+
+    #profilPage div.profilAvatar {
+        width: 90px;
+        height: 90px;
+        border-radius: 100%;
+        border: 2px solid #535353;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        color: var(--main-color);
+        margin-bottom: 8px;
+    }
+
+    #profilPage div.profilAvatar span {
+        color: var(--main-color);
+        font-variation-settings: 'FILL' 1, 'wght' 400;
+        font-size: 40px;
+    }
+
+    #profilPage p.profilNamn {
+        margin: 0;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        color: #1a1a1a;
+    }
+
+    #profilPage p.profilEmail {
+        margin: 0;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #535353;
+    }
+
+    #profilPage div.profilSektion {
+        margin: 10px auto;
+        max-width: 800px;
+        border: 1px solid #f0f0f0;
+        border-radius: 16px;
+    }
+
+    #profilPage div.profilRad {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+        padding: 16px 20px;
+        cursor: pointer;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    #profilPage div.profilRad:last-child {
+        border-bottom: none;
+    }
+
+    #profilPage div.profilRad:hover {
+        background-color: #fafafa;
+    }
+
+    #profilPage div.profilRad span.material-symbols-outlined {
+        font-size: 22px;
+        color: #535353;
+    }
+
+    #profilPage div.profilRad p {
+        margin: 0;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        color: #1a1a1a;
+        flex: 1;
+    }
+
+    #profilPage span.profilPil {
+        color: #535353;
+    }
+
+    #profilPage div.profilRadLogout span.material-symbols-outlined,
+    #profilPage div.profilRadLogout p {
+        color: var(--main-color);
+    }
+
+    /* DINA KOP */
+
+    #dinaKopPage {
+        background-color: #ffffff;
+        margin: 0;
+    }
+
+    #dinaKopPage div.kopLista {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px;
+    }
+
+    #dinaKopPage div.kopKort {
+        border: 1px solid #f0f0f0;
+        border-radius: 16px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #dinaKopPage div.kopKortTopp {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        align-items: center;
+    }
+
+    #dinaKopPage div.kopBild {
+        width: 72px;
+        height: 72px;
+        border-radius: 10px;
+        overflow: hidden; /*så att den blir rund */
+    }
+
+    #dinaKopPage div.kopBild img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #dinaKopPage div.kopInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    #dinaKopPage p.kopNamn {
+        margin: 0;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        color: #1a1a1a;
+    }
+
+    #dinaKopPage p.kopPris {
+        margin: 0;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        color: var(--main-color);
+    }
+
+    #dinaKopPage p.kopOrderNr {
+        margin: 0;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        color: #535353;
+    }
+
+    #dinaKopPage div.kopTracker {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #dinaKopPage div.trackerSteg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    #dinaKopPage div.trackerCircel {
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+        border: 2px solid #535353;
+        background-color: white;
+    }
+
+    #dinaKopPage div.trackerSteg.aktivt div.trackerCircel {
+        background-color: var(--main-color);
+        border-color: var(--main-color);
+    }
+
+    #dinaKopPage div.trackerSteg p {
+        margin: 0;
+        font-family: 'PublicaSans', sans-serif;
+        font-weight: 400;
+        font-size: 11px;
+        color: #535353;
+        white-space: nowrap;
+    }
+
+    #dinaKopPage div.trackerSteg.aktivt p {
+        color: var(--main-color);
+        font-weight: 600;
+    }
+
+    #dinaKopPage div.trackerLinje {
+        flex: 1;
+        height: 2px;
+        background-color: #535353;
+        margin-bottom: 16px;
+    }
+
+    #dinaKopPage div.trackerLinje.aktivt {
+        background-color: var(--main-color);
+    }
+
+
+    /* FAVORITER */
+
+    #favoriterPage {
+        background-color: #ffffff;
+        margin: 0;
+    }
+
+    #favoriterPage div.favGrid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 24px;
+        justify-content: flex-start;
+    }
+
+    #favoriterPage div.annons {
+        width: 280px;
+        height: 350px;
+        background-color: white;
+        border-radius: 20px;
+        position: relative;
+        cursor: pointer;
+        border: 2px solid #eeeeee;
+        transition: box-shadow 500ms;
         overflow: hidden;
     }
 
@@ -1394,8 +2561,8 @@
         z-index: 10;
     }
 
-    #favoriterPage div.annonsBetyg #star {
-        color: #e61d1d;
+    #favoriterPage div.annonsBetyg .star {
+        color: var(--main-color);
         font-weight: 600;
         font-size: 10px;
         font-family: 'PublicaSans';
@@ -1431,7 +2598,7 @@
     }
 
     #favoriterPage div.annonsPris p {
-        color: #e61d1d;
+        color: var(--main-color);
         font-weight: 600;
         font-size: 20px;
         font-family: 'PublicaSans';
@@ -1446,7 +2613,7 @@
         height: 30px;
         border-radius: 10px;
         border: 0;
-        background-color: #e61d1d;
+        background-color: var(--main-color);
         color: white;
         font-family: 'PublicaSans', sans-serif;
         font-size: 13px;
@@ -1461,131 +2628,4 @@
         background-color: #ce1b1b;
     }
 
-
-
-}
-
-
-
-
-
-
-
-
-/* DESKTOP */
-/* DESKTOP */
-/* DESKTOP */
-/* DESKTOP */
-/* DESKTOP */
-/* DESKTOP */
-/* DESKTOP */
-
-@media screen and (min-width: 600px) {
-    body {
-        background-color: white;
-        margin: 0;
-    }
-
-    main {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    div.introText {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-bottom: 20px;
-        margin-top: 80px;
-        /* background-color: pink; */
-        width: 100%;
-        height: 100px;
-    }
-    div.introText h1 {
-        text-align: center;
-        font-family: 'PublicaSans', sans-serif;
-        font-weight: 700;
-        color: #e61d1d;
-        font-size: 3em;
-        margin:0;
-    }
-    div.introText p {
-        margin:0;
-        text-align: center;
-        font-family: 'PublicaSans', sans-serif;
-        font-weight: 400;
-        color: #e61d1d;
-    }
-
-    div.StartKnapp {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* background-color: red; */
-        width: 100%;
-        height: 125px;
-        gap: 30px;
-    }
-    div.StartKnapp a {
-        display: flex;
-        height: 50px;
-        align-self: center;
-        width: 200px;
-        border-radius: 10px;
-        border: 3px solid #e61d1d;
-        background-color: #e61d1d;
-        font-size: 18px;
-        font-weight: 600;
-        font-family: 'PublicaSans';
-        color: white;
-        box-shadow: 0 4px 15px rgba(230, 34, 34, 0.235);
-        cursor:pointer;
-        text-decoration: none;
-        justify-content: center;
-        align-items: center;
-    }
-    div.StartKnapp a.login {
-        display: flex;
-        height: 50px;
-        align-self: center;
-        width: 200px;
-        border-radius: 10px;
-        border: 3px solid #2C3E50;
-        background-color: white;
-        font-size: 18px;
-        font-weight: 600;
-        font-family: 'PublicaSans';
-        color: #2C3E50;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        cursor:pointer;
-        text-decoration: none;
-        justify-content: center;
-        align-items: center;
-    }
-    div.StartKnapp a.login:visited {
-        color: #2C3E50;
-    }
-    div.StartKnapp a:visited {
-        color: white;
-    }
-
-    div.pizzaBild {
-        display: flex;
-        margin:0;
-        padding: 0;
-        justify-content: center;
-        align-items: end;
-        width: 100%;
-        height: 250px;
-        margin-top: auto;
-    }
-    div.pizzaBild img {
-        max-height: 100%;
-        width: auto;
-        margin-top: 200px;
-    }
 }
